@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravine</title>
+<style>
+
+body  {
+    overflow:hidden;
+  	background:url(pics/background.png);
+  	margin:0;
+  	padding:0;
+    background-size: 100% 100%;
+}
+
+  img {vertical-align: middle;}
+
+    .flip-card {
+  margin-top: 0%;
+  background-color: transparent;
+  width: 332px;
+  height: 770px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  max-width: 40vh;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  max-width: 40vh;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow:0 0 20px white;
+}
+
+.flip-card-front {
+  background-color: #0000;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #0000;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.background {
+  overflow:hidden;
+  position:absolute;
+  z-index: 2;
+  margin:0;
+  padding:0;
+}
+
+.button {
+  margin-top: 0%;
+  margin-left: 13%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  width:280px;
+  border-radius: 15px;
+  height:35px;
+  display: inline-block;
+}
+
+.button:hover {
+	background-color:rgba(255,165,0, 0.2);
+}
+
+</style>
+</head>
+
+<body>
+  <div style="margin-left: 10%; position: relative; left: 0; top: 0;">
+    <div class="button"><input type="image" src="pics/fullpamphlet.png"
+      style="
+      margin:0;
+      cursor: pointer;
+      width:280px;
+      border-radius: 15px;
+      height:35px;
+      display: inline-block;"
+      onclick="window.location.href='pamphlet.html'"></div>
+      <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="pics/pamphletfront.png" style="max-width:40vh">
+        </div>
+        <div class="flip-card-back">
+          <img src="pics/pamphletback.png" style="max-width:40vh">
+      </div>
+      </div>
+  </div

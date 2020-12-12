@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravine</title>
+<style>
+
+body{
+	overflow:hidden;
+	background-image:radial-gradient(orange,white);
+	margin:0;
+	padding:0;
+}
+
+img {vertical-align: middle;}
+
+.flip-card {
+  background-color: transparent;
+  margin-top:0%;
+	margin-left:16%;
+  width: 996px;
+  height: 770px;
+  perspective: 1000px;
+}
+
+.flip-card .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px white;
+	-moz-box-shadow:0 0 20px white;
+	-o-box-shadow:0 0 20px white;
+	-ms-box-shadow:0 0 20px white;
+	box-shadow:0 0 20px white;
+}
+
+
+.flip-card-inner {
+  position: relative;
+  max-width: 120vh;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  max-width: 120vh;
+  /* height: 100%; */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow:0 0 20px white;
+}
+
+.flip-card-front {
+  background-color: #0000;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #0000;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.button {
+  margin-top: 0.5%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  width:200px;
+  border-radius: 15px;
+  height:35px;
+  display: inline-block;
+
+}
+.button:hover {
+	background-color:rgba(255,165,0, 0.2);
+}
+
+</style>
+</head>
+
+<body>
+  <div class="button"><input type="image" src="pics/backtobook.png"
+    style="
+    margin:0;
+    cursor: pointer;
+    width:200px;
+    border-radius: 15px;
+    height:35px;
+    display: inline-block;"
+    onclick="window.location.href='index.html'"></div>
+
+    <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="pics/back.png" style="max-width:120vh">
+      </div>
+      <div class="flip-card-back">
+        <img src="pics/front.png" style="max-width:120vh">
+    </div>
+    </div>
+    </div>
