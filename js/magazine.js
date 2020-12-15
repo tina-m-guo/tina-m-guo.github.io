@@ -83,7 +83,7 @@ function disableControls(page) {
 	else
 		$('.previous-button').hide();
 
-	if (page==52)
+	if (page==1)
 		$('.next-button').show();
 	else
 		$('.next-button').hide();
@@ -125,7 +125,7 @@ function resizeViewport() {
 			if ($('.magazine').turn('page')==1)
 				$('.magazine').turn('peel', 'br');
 
-			$('.next-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
+			$('.next-button').css({height: bound.height, backgroundPosition: '-38px '+(bound.height/2-32/2)+'px'});
 			$('.previous-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
 		}
 
