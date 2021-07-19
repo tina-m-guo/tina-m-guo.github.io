@@ -83,7 +83,7 @@ function disableControls(page) {
 	else
 		$('.previous-button').hide();
 
-	if (page==1)
+	if (page==1 || page==52 || page==51)
 		$('.next-button').show();
 	else
 		$('.next-button').hide();
